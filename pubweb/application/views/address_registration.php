@@ -63,7 +63,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+	 #map {
+		width: 500px;
+		height: 400px;
+	  }
 	</style>
+
 </head>
 <body>
 
@@ -71,19 +76,78 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+		<div id="map"></div>
+		<?=form_open('email/send')?>
+			<?php echo form_label(lang("user_registration_firstname"),"street");?>
+			<?php echo form_input("street","");?>
+			<?php echo form_label(lang("user_registration_lastname"),"num_ext");?>
+			<?php echo form_input("num_ext","");?>        
+			<?php echo form_label(lang("user_registration_birthdate"),"num_int");?>
+			<?php echo form_input("num_int","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"postalCode");?>
+			<?php echo form_input("postal_code","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"colonia");?>
+			<?php echo form_input("colonia","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"municipio");?>
+			<?php echo form_input("municipio","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"state");?>
+			<?php echo form_input("state","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"phone");?>
+			<?php echo form_input("phone","");?>
+			<?php echo form_label(lang("user_registration_birthdate"),"cellPhone");?>
+			<?php echo form_input("cellPhone","");?>
+		<?=form_close()?>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<article>
 
+	</article>
+<script>
+function success(position) {
+  var mapcanvas = document.createElement('div');
+  mapcanvas.id = 'map';
+  mapcanvas.style.height = '400px';
+  mapcanvas.style.width = '600px';
+
+  document.querySelector('article').appendChild(mapcanvas);
+
+  var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+  
+  var options = {
+	zoom: 15,
+	center: coords,
+	mapTypeControl: true,
+	draggable:true,
+	navigationControlOptions: {
+		style: google.maps.NavigationControlStyle.SMALL
+	},
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map"), options);
+
+  var marker = new google.maps.Marker({
+	  position: coords,
+	  map: map,
+	  title:"You are here!"
+  });
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success);
+} else {
+  error('Geo Location is not supported');
+}
+
+</script>
+
+
+</section>
 </body>
 </html>
