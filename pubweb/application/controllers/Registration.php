@@ -3,6 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Registration extends CI_Controller {
 
+
+ public function __construct()
+    {
+        parent::__construct();
+	$this->load->helper('form');
+	$this->load->helper('language');
+	$this->lang->load('registration');
+		
+    }
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,5 +32,10 @@ class Registration extends CI_Controller {
 	{
 		$this->load->helper('form');
 		$this->load->view('address_registration');
+	}
+
+	public function general()
+	{
+		$this->load->view('user_registration',array("name"=>"Arturo"));
 	}
 }
