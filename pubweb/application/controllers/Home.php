@@ -13,6 +13,29 @@ class Home extends MY_Controller {
 	$this->load->helper('url');
 	$this->load->helper('language');
 	$this->lang->load('registration');
+	$this->utils = [
+			"js"	=>	[
+				"jquery"	=>	"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js",
+				"bootstrap" => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
+				"bootstrapWizard"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/jquery.bootstrap.wizard.js",
+				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.js",
+				"knockout"	=>	base_url()."/util/js/knockout.js",
+				"home"	=>	base_url()."/util/js/home.js"
+			],
+			"css" => [
+				"bootstrap"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+				"theme"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css",
+				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.css",
+				"home"	=>	base_url()."/util/css/home.css"
+			],
+			"img"	=>	[
+				"header"	=>	base_url()."/util/images/futbol.png",
+				"logo"	=>	base_url()."/util/images/logo-azul.png",
+				"michelada"	=>	base_url()."/util/images/michelada.png",
+				"comparte"	=>	base_url()."/util/images/comparte.png"
+			]
+		];
+		
 		
     }
 
@@ -34,30 +57,17 @@ class Home extends MY_Controller {
 	public function index()
 	{
 
-		$this->utils = [
-			"js"	=>	[
-				"jquery"	=>	"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js",
-				"bootstrap" => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
-				"bootstrapWizard"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/jquery.bootstrap.wizard.js",
-				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.js",
-				"home"	=>	base_url()."/util/js/home.js"
-			],
-			"css" => [
-				"bootstrap"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
-				"theme"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css",
-				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.css",
-				"home"	=>	base_url()."/util/css/home.css"
-			],
-			"img"	=>	[
-				"header"	=>	base_url()."/util/images/futbol.png",
-				"logo"	=>	base_url()."/util/images/logo-azul.png"
-			]
-		];
+		
 		$data=[
 			"utils"	=>	$this->utils
 		];
-
 		$this->render('home',$data);
+
+	}
+
+
+	public function productos() 
+	{
 
 	}
 

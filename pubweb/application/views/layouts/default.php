@@ -18,7 +18,7 @@
 
   <body>
 
-    <nav class="navbar navbar-static-top navbar-dark bg-inverse " style="padding-top:10px">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: rgb(255, 255, 255); padding-top: 5px; padding-bottom: 5px;">
       <a class="navbar-brand" href="#" style="padding: 0px;"><img src="<?=$utils['img']['logo']?>" class="img-responsive"></a>
       <ul class="nav navbar-nav pull-right">
         <li class="nav-item active">
@@ -31,7 +31,7 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <span class="navBtn">Botón</span>
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
     </nav>
@@ -61,6 +61,9 @@
       
       <?=$center?>
       
+    <div class="col-md-12 color-blue text-center" style="font-size: 1.6em; margin-top: 30px;">
+        #YoTomoCervezaPorque
+    </div>
       <footer>
         <p>&copy; Company 2015</p>
       </footer>

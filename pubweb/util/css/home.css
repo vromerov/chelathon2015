@@ -28,9 +28,6 @@ span.navBtn {
 	background-color: #F8F8F8;
 }
 /* wizard */
-body{ 
-	margin-top:40px; 
-}
 
 .stepwizard-step p {
 	margin-top: 10px;
@@ -77,3 +74,49 @@ body{
     text-align: center;
     width: 50px;
 }
+.beer-cont {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.btn-beer-buy {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.comparte-amigos {
+	text-transform: uppercase;
+	font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+.coparte-amigos-benef {
+    border-bottom: 1px solid #F2F2F2;
+    color: #777;
+    display: block;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.comparte-bote-gratis {
+	font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

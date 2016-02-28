@@ -19,6 +19,10 @@ class Producto extends MY_Controller {
 	{
 			$this->load->model('Producto_model','',true);
 			$data = $this->Producto_model->get_last_ten_entries();
+			foreach($data AS $key => $val)
+			{
+				$data[$key]->img = base_url()."/util/images/catalog/".$data[$key]->producto_id.".png";
+			}
 			$this->send($data);
 	}
 
