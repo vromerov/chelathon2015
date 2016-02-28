@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Registration extends CI_Controller {
 
+	var $errors = array();
 
  public function __construct()
     {
@@ -33,8 +34,37 @@ class Registration extends CI_Controller {
 		$this->load->view('address_registration');
 	}
 
+	public function post_general()
+	{
+		if($data = $this->input->post() !== false)
+		{
+
+			$this->load->model('Registration_model');
+
+			if( $this->Registration_model->create($data) == true)
+			{
+				$this->load->view('address_registration');
+			} 
+			else
+			{
+				$this->errors[] = lang("user_registration_error_try_again");
+				$this->general();
+			}
+		}
+	}
+
 	public function general()
 	{
-		$this->load->view('user_registration',array("name"=>"Arturo"));
+		$this->load->helper('UI');
+		if($this->input->server('REQUEST_METHOD') == "POST" && empty($this->errors) )
+		{
+			$this->post_general();
+		}
+		else
+		{
+			$data = array();
+			$data["errors"] = $this->errors;
+			$this->load->view('user_registration',$data);
+		}
 	}
 }
