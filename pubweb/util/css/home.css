@@ -1,0 +1,122 @@
+span.navBtn {
+  background-image: linear-gradient(to bottom, #5cb85c 0px, #419641 100%);
+	background-repeat: repeat-x;
+	border-color: #3e8f3e;
+	color: white;
+	display: block;
+	line-height: 20px;
+	padding: 15px;
+}
+
+.color-blue {
+	color: #0375a2;
+}
+
+.como-funciona {
+	   display: block;
+	padding-top: 11px;
+}
+
+.border-blue-left {
+	border-left: solid 1px #0375a2;
+}
+
+.border-blue-right {
+	border-right: solid 1px #0375a2;
+}
+.bg-light-gray {
+	background-color: #F8F8F8;
+}
+/* wizard */
+
+.stepwizard-step p {
+	margin-top: 10px;
+}
+
+.stepwizard-row {
+	display: table-row;
+}
+
+.stepwizard {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+.stepwizard-step button[disabled] {
+	opacity: 1 !important;
+	filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+	background-color: #ccc;
+	bottom: 0;
+	content: " ";
+	height: 1px;
+	position: absolute;
+	top: 24px;
+	width: 100%;
+
+}
+
+.stepwizard-step {
+	display: table-cell;
+	text-align: center;
+	position: relative;
+}
+
+.btn-circle {
+    border-radius: 50px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 1.42857;
+    padding: 12px 0;
+    text-align: center;
+    width: 50px;
+}
+.beer-cont {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.btn-beer-buy {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.comparte-amigos {
+	text-transform: uppercase;
+	font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+.coparte-amigos-benef {
+    border-bottom: 1px solid #F2F2F2;
+    color: #777;
+    display: block;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.comparte-bote-gratis {
+	font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

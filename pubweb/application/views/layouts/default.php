@@ -1,14 +1,80 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-	</style>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'util/css/common.css';?>">
-</head>
-<body>
-    <?php echo $center; ?>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <?foreach($utils['css'] AS $lib => $route): ?>
+    <link rel="stylesheet" class="<?=$lib?>" type="text/css" href="<?=$route?>">
+  <?endforeach?>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: rgb(255, 255, 255); padding-top: 5px; padding-bottom: 5px;">
+      <a class="navbar-brand" href="#" style="padding: 0px;"><img src="<?=$utils['img']['logo']?>" class="img-responsive"></a>
+      <ul class="nav navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#funciona">¿Cómo funciona?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Premios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron no-padding bg-light-gray" style="padding: 0px" >
+      <img src="<?=$utils['img']['header']?>" class="img-responsive">
+      <div class="row text-center">
+        <h3 class="color-blue como-funciona" id="funciona">¿Cómo funciona?</h3>
+      </div>
+      <br/>
+      <div class="row" id="funciona">
+          <div class="col-md-2 col-md-offset-2 color-blue border-blue-right">
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+          </div>
+          <div class="col-md-4 color-blue ">
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+          </div>
+          <div class="col-md-2 color-blue border-blue-left">
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+          </div>
+      </div>
+      <br/>
+    </div>
+
+    <div class="container">
+      
+      <?=$center?>
+      
+    <div class="col-md-12 color-blue text-center" style="font-size: 1.6em; margin-top: 30px;">
+        #YoTomoCervezaPorque
+    </div>
+</div> <!-- /container -->
+<br/><br/>
+ <footer>
+  <img src="<?=$utils['img']['footer']?>" class="img-responsive">
+</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <?foreach($utils['js'] AS $lib => $route): ?>
+      <script src="<?=$route?>" class="<?=$lib?>"></script>
+    <?endforeach?>
+  </body>
 </html>
