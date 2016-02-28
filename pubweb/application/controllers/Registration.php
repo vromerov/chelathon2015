@@ -92,7 +92,7 @@ class Registration extends MY_Controller {
 			$this->post_general();
 		}
 		else
-		{
+		{	
 			$data = array();
 			$data["errors"] = $this->errors;
 
