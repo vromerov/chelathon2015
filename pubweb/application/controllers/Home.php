@@ -30,37 +30,10 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function address()
+	public function layout()
 	{
-		if($this->input->server('REQUEST_METHOD') == "POST" && empty($this->errors) )
-		{
-			$this->post_address();
-		}
-		else
-		{
-			$data = array();
-			$data["errors"] = $this->errors;
-			$this->load->view('address_registration',$data);
-		}
+		
 
-	}
-
-	public function post_address() 
-	{
-		if($data = $this->input->post() !== false)
-		{
-			$this->load->model('Registration_model');
-
-			if( $this->Registration_model->addAddress($data) == true)
-			{
-				$this->load->view('address_registration');
-			} 
-			else
-			{
-				$this->errors[] = lang("user_address_error_try_again");
-				$this->general();
-			}
-		}
 	}
 
 
