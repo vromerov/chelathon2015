@@ -1,0 +1,54 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+ALTER TABLE `chelaton`.`usuario` 
+CHANGE COLUMN `nombres` `nombres` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `apellidos` `apellidos` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `fecha_nacimiento` `fecha_nacimiento` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `correo_electronico` `correo_electronico` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `numero_celular` `numero_celular` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `llave_secreta` `llave_secreta` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `creado_en` `creado_en` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ,
+DROP INDEX `correo_electronico_UNIQUE` ;
+
+ALTER TABLE `chelaton`.`orden` 
+CHANGE COLUMN `calle` `calle` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `numero_exterior` `numero_exterior` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `numero_interior` `numero_interior` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `codigo_postal` `codigo_postal` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `numero_telefonico` `numero_telefonico` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `colonia` `colonia` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `delegacion` `delegacion` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estado` `estado` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `creado_en` `creado_en` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `entregar_en` `entregar_en` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `entrega_inmediata` `entrega_inmediata` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `chelaton`.`usuario_direccion` 
+CHANGE COLUMN `principal` `principal` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `creado_en` `creado_en` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `ultimo_pedido_en` `ultimo_pedido_en` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `chelaton`.`orden_detalle` 
+CHANGE COLUMN `cantidad` `cantidad` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `subtotal` `subtotal` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `total` `total` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `chelaton`.`producto` 
+CHANGE COLUMN `nombre` `nombre` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `precio` `precio` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `chelaton`.`orden_bitacora` 
+CHANGE COLUMN `descripcion` `descripcion` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `creado_en` `creado_en` VARCHAR(45) NULL DEFAULT NULL ;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
