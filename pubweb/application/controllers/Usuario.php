@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Orden extends MY_Controller {
+class Usuario extends MY_Controller {
 
 	var $errors = array();
 
@@ -23,9 +23,9 @@ class Orden extends MY_Controller {
 		if($data !== false)
 		{
 
-		$this->load->model('Orden_model','',true);
+		$this->load->model('Usuario_model','',true);
 
-			if( $this->Orden_model->create($data) == true)
+			if( $this->Usuario_model->create($data) == true)
 			{
 				$data = array();
 				$code = 203;

@@ -7,10 +7,7 @@ class OrdenDetalle_model extends CI_Model {
     var $producto_id = '';
     var $orden_id = '';
     var $estatus = '';
-    var $order_id = '';
-	
-    var $usuario_direccion_id  = null;
-  
+    
     function __construct()
     {
         // Call the Model constructor
@@ -18,11 +15,11 @@ class OrdenDetalle_model extends CI_Model {
     }
     
    
-    function create($data,$order_id=0)
+    function create($data,$orden_id=0)
     {
 	foreach($data as $product)
 	{
-		$this->db->select( sprintf( 'precio * %d AS total',$product['cantidad']));
+		$this->db->select( sprintf( 'precio * %d AS total',$product['cantidad']),false);
 		$this->db->from('producto');
 		$this->db->where('producto_id', $product['producto_id']);
 		$query = $this->db->get();
