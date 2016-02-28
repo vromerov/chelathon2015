@@ -21,17 +21,17 @@
     <nav class="navbar navbar-default navbar-fixed-top" style="background-color: rgb(255, 255, 255); padding-top: 5px; padding-bottom: 5px;">
       <a class="navbar-brand" href="#" style="padding: 0px;"><img src="<?=$utils['img']['logo']?>" class="img-responsive"></a>
       <ul class="nav navbar-nav pull-right">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#funciona">¿Cómo funciona?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Premios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Contacto</a>
         </li>
       </ul>
     </nav>
@@ -40,10 +40,10 @@
     <div class="jumbotron no-padding bg-light-gray" style="padding: 0px" >
       <img src="<?=$utils['img']['header']?>" class="img-responsive">
       <div class="row text-center">
-        <h3 class="color-blue como-funciona">¿Cómo funciona?</h3>
+        <h3 class="color-blue como-funciona" id="funciona">¿Cómo funciona?</h3>
       </div>
       <br/>
-      <div class="row">
+      <div class="row" id="funciona">
           <div class="col-md-2 col-md-offset-2 color-blue border-blue-right">
             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
           </div>
@@ -64,11 +64,11 @@
     <div class="col-md-12 color-blue text-center" style="font-size: 1.6em; margin-top: 30px;">
         #YoTomoCervezaPorque
     </div>
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
-
+</div> <!-- /container -->
+<br/><br/>
+ <footer>
+  <img src="<?=$utils['img']['footer']?>" class="img-responsive">
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

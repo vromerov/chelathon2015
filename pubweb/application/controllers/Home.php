@@ -32,7 +32,9 @@ class Home extends MY_Controller {
 				"header"	=>	base_url()."/util/images/futbol.png",
 				"logo"	=>	base_url()."/util/images/logo-azul.png",
 				"michelada"	=>	base_url()."/util/images/michelada.png",
-				"comparte"	=>	base_url()."/util/images/comparte.png"
+				"comparte"	=>	base_url()."/util/images/comparte.png",
+				"footer"	=>	base_url()."/util/images/footer.png",
+				"fase_2"	=>	base_url()."/util/images/catalog/fase-2.png",
 			]
 		];
 		

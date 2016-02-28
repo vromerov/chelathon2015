@@ -23,6 +23,10 @@
 			<div class="col-md-12">
 				<h3 class="color-blue text-center">Esta es la mejor cerveza que tenemos para ti:</h3>
 				<br/><br/>
+				<div style="margin-top: 20px">
+					<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continuar</button>
+				</div>
+				<div class="clearfix"></div>
 				<div  data-bind="foreach: beetCatalog()" class="clearfix">
 					<div data-bind="foreach: $parent.catalogo">
 						<div class="col-md-3 col-sm-4 col-xs-5 text-center beer-cont">
@@ -52,9 +56,9 @@
 					</div>
 				</div>
 			  	<!-- catalogo -->
-
+				<div class="clearfix"></div> 
 			  	<div style="margin-top: 20px">
-					<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+					<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continuar</button>
 				</div>
 
 				<br/><br/>
@@ -79,25 +83,140 @@
 
 				</div>
 
-
-
-
 			</div>
 		</div>
 	</div>
 	<div class="row setup-content" id="step-2">
 		<div class="col-xs-12">
 			<div class="col-md-12">
-				<h3> Step 2</h3>
-				<div class="form-group">
-					<label class="control-label">Company Name</label>
-					<input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+				<!-- catalogo -->
+				<div style="margin-top: 20px">
+					<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Pagar</button>
 				</div>
-				<div class="form-group">
-					<label class="control-label">Company Address</label>
-					<input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
+				<div class="col-md-12" style="margin-bottom: 50px;">
+					<div class="col-md-2 col-md-offset-4">
+						<img src="<?=$utils['img']['fase_2']?>" class="img-responsive">
+					</div>
+					<div class="col-md-3">
+						<h2>Stella Artois</h2>
+						<span style="font-size: 1.3em">$94.00 <span class="color-blue">Envío gratuito</span></span>
+						<hr/>
+						<p>
+						<span style="font-size: 2em">Tu pedido:</span><br/>
+						<span style="font-size: 1.7em">12 Pack 2 Oz.</span><br/><br/>
+						<button class="btn btn-success">Me la Llevo</button>
+						<br/><br/>
+						Cerveza Superior Stella
+						</p>
+					</div>
 				</div>
-				<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-5 text-center beer-cont">
+					<div class="beer-img">
+						<img  src="http://localhost/proyectos/chelathon2015/pubweb//util/images/catalog/1.png">							
+					</div>
+					<div class="beer-name">
+						<span >Budweiser</span>
+					</div>
+					<div class="beer-desc">
+					<span>1</span>
+					</div>
+					<div class="beer-price color-blue">
+						<span>100</span>
+					</div>
+					<div class="beer-price">
+						<div aria-label="Basic example" role="group" class="btn-group">
+								<button class="btn btn-default" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-download"></span>
+								</button>
+								<button class="btn btn-success btn-beer-buy" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+								</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-4 col-xs-5 text-center beer-cont">
+					<div class="beer-img">
+						<img  src="http://localhost/proyectos/chelathon2015/pubweb//util/images/catalog/1.png">							
+					</div>
+					<div class="beer-name">
+						<span >Budweiser</span>
+					</div>
+					<div class="beer-desc">
+					<span>1</span>
+					</div>
+					<div class="beer-price color-blue">
+						<span>100</span>
+					</div>
+					<div class="beer-price">
+						<div aria-label="Basic example" role="group" class="btn-group">
+								<button class="btn btn-default" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-download"></span>
+								</button>
+								<button class="btn btn-success btn-beer-buy" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+								</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-5 text-center beer-cont">
+					<div class="beer-img">
+						<img  src="http://localhost/proyectos/chelathon2015/pubweb//util/images/catalog/1.png">							
+					</div>
+					<div class="beer-name">
+						<span >Budweiser</span>
+					</div>
+					<div class="beer-desc">
+					<span>1</span>
+					</div>
+					<div class="beer-price color-blue">
+						<span>100</span>
+					</div>
+					<div class="beer-price">
+						<div aria-label="Basic example" role="group" class="btn-group">
+								<button class="btn btn-default" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-download"></span>
+								</button>
+								<button class="btn btn-success btn-beer-buy" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+								</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-5 text-center beer-cont">
+					<div class="beer-img">
+						<img  src="http://localhost/proyectos/chelathon2015/pubweb//util/images/catalog/1.png">							
+					</div>
+					<div class="beer-name">
+						<span >Budweiser</span>
+					</div>
+					<div class="beer-desc">
+					<span>1</span>
+					</div>
+					<div class="beer-price color-blue">
+						<span>100</span>
+					</div>
+					<div class="beer-price">
+						<div aria-label="Basic example" role="group" class="btn-group">
+								<button class="btn btn-default" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-download"></span>
+								</button>
+								<button class="btn btn-success btn-beer-buy" type="button">
+									<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+								</button>
+						</div>
+					</div>
+				</div>
+
+				
+
+
 			</div>
 		</div>
 	</div>
