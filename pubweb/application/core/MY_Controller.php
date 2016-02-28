@@ -5,6 +5,8 @@ class MY_Controller extends CI_Controller
 {
     public $template=null;
 
+    public $utils =[];
+
     public function __construct()
     {
              parent::__construct();

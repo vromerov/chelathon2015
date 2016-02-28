@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends MY_Controller {
 
 	var $errors = array();
 
@@ -10,6 +10,7 @@ class Home extends CI_Controller {
         parent::__construct();
 	$this->load->helper('form');
 	$this->load->helper('UI');
+	$this->load->helper('url');
 	$this->load->helper('language');
 	$this->lang->load('registration');
 		
@@ -30,9 +31,33 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function layout()
+	public function index()
 	{
-		
+
+		$this->utils = [
+			"js"	=>	[
+				"jquery"	=>	"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js",
+				"bootstrap" => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
+				"bootstrapWizard"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/jquery.bootstrap.wizard.js",
+				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.js",
+				"home"	=>	base_url()."/util/js/home.js"
+			],
+			"css" => [
+				"bootstrap"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+				"theme"	=>	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css",
+				"prettyfy"	=>	"http://mifreelancer.mx/util/bootstrap-wizard/prettify.css",
+				"home"	=>	base_url()."/util/css/home.css"
+			],
+			"img"	=>	[
+				"header"	=>	base_url()."/util/images/futbol.png",
+				"logo"	=>	base_url()."/util/images/logo-azul.png"
+			]
+		];
+		$data=[
+			"utils"	=>	$this->utils
+		];
+
+		$this->render('home',$data);
 
 	}
 
