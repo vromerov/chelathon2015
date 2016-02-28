@@ -33,8 +33,13 @@ class Home extends MY_Controller {
 				"logo"	=>	base_url()."/util/images/logo-azul.png",
 				"michelada"	=>	base_url()."/util/images/michelada.png",
 				"comparte"	=>	base_url()."/util/images/comparte.png",
+				"feed"	=>	base_url()."/util/images/igfeed.png",
 				"footer"	=>	base_url()."/util/images/footer.png",
 				"fase_2"	=>	base_url()."/util/images/catalog/fase-2.png",
+				"cacahuates"	=>	base_url()."/util/images/cacahuates.png",
+				"chips"	=>	base_url()."/util/images/chips.png",
+				"pago"	=>	base_url()."/util/images/fase3.png",
+				"vip"	=>	base_url()."/util/images/membresia-vip.png",
 			]
 		];
 		

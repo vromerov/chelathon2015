@@ -42,6 +42,7 @@
 			nextStepWizard.removeAttr('disabled').trigger('click');
 			$("#"+curStepBtn+"-btn").removeClass("btn-default").addClass("btn-success");
 		}
+		return false;
 	});
 
 	$('div.setup-panel div a.btn-primary').trigger('click');

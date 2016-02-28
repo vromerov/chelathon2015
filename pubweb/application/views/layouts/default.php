@@ -33,6 +33,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contacto</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
       </ul>
     </nav>
 
@@ -64,9 +67,11 @@
     <div class="col-md-12 color-blue text-center" style="font-size: 1.6em; margin-top: 30px;">
         #YoTomoCervezaPorque
     </div>
+
 </div> <!-- /container -->
 <br/><br/>
  <footer>
+ <img src="<?=$utils['img']['feed']?>" class="img-responsive">
   <img src="<?=$utils['img']['footer']?>" class="img-responsive">
 </footer>
 
