@@ -7,12 +7,13 @@ class MY_Controller extends CI_Controller
 
     public function __construct()
     {
-             parent::__construct();
+       parent::__construct();
+	$_POST = json_decode(file_get_contents("php://input"), true);
 
         if(is_null($this->template)){
             $this->template = 'layouts/default';
         }   
-	$_POST = json_decode(file_get_contents("php://input"), true);
+	
     }
 
 	public function render($center_path,$center_data,$sidebar_path="",$sidebar_data="")
