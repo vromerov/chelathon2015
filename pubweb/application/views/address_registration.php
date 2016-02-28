@@ -67,9 +67,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		width: 500px;
 		height: 400px;
 	  }
-	  label{ 
-	  	display:block;
-	  }
+	label,input[type=submit]
+	{
+		display:block;
+	}
 	</style>
 
 </head>
@@ -81,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<div id="map"></div>
 		<div>
-			<?=form_open('email/send')?>
+			<?=form_open('registration/address')?>
 				<?php echo form_label(lang("user_address_street"),"street");?>
 				<?php echo form_input("street","", ["id" => "street"]);?>
 				<?php echo form_label(lang("user_addess_num_ext"),"num_ext");?>
@@ -100,6 +101,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php echo form_input("phone","", ["id" => "phone"]);?>
 				<?php echo form_label(lang("user_addess_cellPhone"),"cellPhone");?>
 				<?php echo form_input("cellPhone","", ["id" => "cellPhone"]);?>
+
+				<?php echo form_submit("register",lang("user_address_post"));?>
 			<?=form_close()?>
 		</div>
 	</div>
@@ -150,38 +153,38 @@ function success(position) {
 
 
   /*google.maps.event.addListener(marker, 'dragend', function() {
-    //updateMarkerStatus('Drag ended');
-    geocodePosition(marker.getPosition());
+	//updateMarkerStatus('Drag ended');
+	geocodePosition(marker.getPosition());
   });*/
 
   var dataAddress = {
-  	"street" : "Montes Urales",
-  	"num_int": "",
-  	"num_ext": "445",
-  	"postalCode": "11000",
-  	"neighborhood": " Lomas de Chapultepec",
-  	"municipio": "Miguel Hidalgo",
-  	"state" : "Ciudad de México"
+	"street" : "Montes Urales",
+	"num_int": "",
+	"num_ext": "445",
+	"postalCode": "11000",
+	"neighborhood": " Lomas de Chapultepec",
+	"municipio": "Miguel Hidalgo",
+	"state" : "Ciudad de México"
   };
 
   $.each(dataAddress, function (key, value) {
-  		$("#"+key).val(value);
+		$("#"+key).val(value);
   });
 
 }
 /*
 function geocodePosition(pos) {
   geocoder.geocode({
-    latLng: pos
+	latLng: pos
   }, function(responses) {
-    if (responses && responses.length > 0) {
-    	console.log(responses);
-    	console.log(responses[0].formatted_address)
-      //updateMarkerAddress(responses[0].formatted_address);
-    } else {
-    	alert("no se pudo");
-      //updateMarkerAddress('Cannot determine address at this location.');
-    }
+	if (responses && responses.length > 0) {
+		console.log(responses);
+		console.log(responses[0].formatted_address)
+	  //updateMarkerAddress(responses[0].formatted_address);
+	} else {
+		alert("no se pudo");
+	  //updateMarkerAddress('Cannot determine address at this location.');
+	}
   });
 }*/
 

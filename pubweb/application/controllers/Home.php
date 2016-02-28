@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Registration extends CI_Controller {
+class Home extends CI_Controller {
 
 	var $errors = array();
 
@@ -65,37 +65,4 @@ class Registration extends CI_Controller {
 
 
 
-	public function post_general()
-	{
-		if($data = $this->input->post() !== false)
-		{
-
-			$this->load->model('Registration_model');
-
-			if( $this->Registration_model->create($data) == true)
-			{
-				$this->load->view('address_registration');
-			} 
-			else
-			{
-				$this->errors[] = lang("user_registration_error_try_again");
-				$this->general();
-			}
-		}
-	}
-
-	public function general()
-	{
-		
-		if($this->input->server('REQUEST_METHOD') == "POST" && empty($this->errors) )
-		{
-			$this->post_general();
-		}
-		else
-		{
-			$data = array();
-			$data["errors"] = $this->errors;
-			$this->load->view('user_registration',$data);
-		}
-	}
 }

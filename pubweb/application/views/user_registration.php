@@ -63,27 +63,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+	label,input[type=submit]
+	{
+	display:block;
+	}
 	</style>
 </head>
 <body>
 
 <div id="container">
-	<h1>Registro</h1>
+	<h1><?php echo lang("user_registration_title"); ?></h1>
 
 	<div id="body">
-		<p>
-		<?php echo lang("user_registration_headline"); ?></p>
-		<?php echo form_open('registration/user'); ?>
+		
+<p>
+<?php echo last_user_error($errors); ?>
+</p>
+		<p><?php echo lang("user_registration_headline"); ?></p>
+		<?php echo form_open('registration/general'); ?>
 		<?php echo form_label(lang("user_registration_firstname"),"firstname");?>
 		<?php echo form_input("firstname","");?>
 		<?php echo form_label(lang("user_registration_lastname"),"lastname");?>
 		<?php echo form_input("lastname","");?>		
 		<?php echo form_label(lang("user_registration_birthdate"),"birthdate");?>
 		<?php echo form_input("birthdate","");?>
-		<?php echo form_label(lang("user_registration_email_address"),"firstname");?>
+		<?php echo form_label(lang("user_registration_email_address"),"email_address");?>
 		<?php echo form_input("email_address","");?>
-		<?php echo form_label(lang("user_registration_cellphone_number"),"firstname");?>
+		<?php echo form_label(lang("user_registration_cellphone_number"),"cellphone_number");?>
 		<?php echo form_input("cellphone_number","");?>
+		<?php echo form_submit("register",lang("user_registration_post"));?>
+
 		<?php echo form_close(); ?>
 
 	</div>
