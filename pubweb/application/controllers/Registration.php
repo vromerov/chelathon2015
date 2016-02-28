@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Registration extends CI_Controller {
+class Registration extends MY_Controller {
 
 	var $errors = array();
 
@@ -12,9 +12,8 @@ class Registration extends CI_Controller {
 	$this->load->helper('UI');
 	$this->load->helper('language');
 	$this->lang->load('registration');
-		
-    }
-
+    }   
+ 
 	/**
 	 * Index Page for this controller.
 	 *
@@ -95,7 +94,11 @@ class Registration extends CI_Controller {
 		{
 			$data = array();
 			$data["errors"] = $this->errors;
-			$this->load->view('user_registration',$data);
+
+
+		$this->render('user_registration',$data);
+
 		}
+
 	}
 }

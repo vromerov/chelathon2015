@@ -17,6 +17,7 @@ $lang['user_addess_marker'] = "Tú estás aqui";
 $lang['user_registration_email_address'] = "Correo Electrónico";
 $lang['user_registration_birthdate'] = "Fecha de Nacimiento";
 $lang['user_registration_cellphone_number'] = "Número Celular";
+$lang['user_registration_secret_key'] = "Clave Personal";
 $lang['user_registration_post'] = "Registrarme";
 $lang['user_registration_error_try_again'] = "Ocurrio un error, intente de nuevo";
 $lang['user_address_post'] = "Continuar";
