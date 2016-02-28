@@ -9,9 +9,10 @@ class Registration extends MY_Controller {
     {
         parent::__construct();
 	$this->load->helper('form');
-	$this->load->helper('UI');
+	$this->load->helper('ui');
 	$this->load->helper('language');
 	$this->lang->load('registration');
+	$this->load->helper('url');
     }   
  
 	/**
