@@ -115,31 +115,6 @@ LOCK TABLES `orden_detalle` WRITE;
 /*!40000 ALTER TABLE `orden_detalle` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `producto`
---
-
-DROP TABLE IF EXISTS `producto`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `producto` (
-  `producto_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
-  `precio` varchar(45) DEFAULT NULL,
-  `estatus` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`producto_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `producto`
---
-
-LOCK TABLES `producto` WRITE;
-/*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (1,'chela 1','100','A'),(2,'chela 2','120','B');
-/*!40000 ALTER TABLE `producto` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `usuario`

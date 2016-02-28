@@ -16,7 +16,7 @@
 			<p>Dirección</p>
 		</div>
 		<div class="stepwizard-step">
-			<a href="#step-4" id="step-4-btn" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+			<a href="#step-4" id="step-4-btn" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
 			<p>A divertirse</p>
 		</div>
 	</div>
@@ -247,8 +247,12 @@
 	<div class="row setup-content" id="step-4">
 		<div class="col-xs-12">
 			<div class="col-md-12 text-center">
-				<img src="<?=$utils['img']['vip']?>">
-				
+				<a href="#" data-toggle="modal" data-target="#myModalVip">
+					<img src="<?=$utils['img']['vip']?>">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#myModal">
+					<img src="<?=$utils['img']['beneficios']?>">
+				</a>
 			</div>
 		</div>
 	</div>

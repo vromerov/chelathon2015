@@ -38,10 +38,6 @@ CHANGE COLUMN `subtotal` `subtotal` VARCHAR(45) NULL DEFAULT NULL ,
 CHANGE COLUMN `total` `total` VARCHAR(45) NULL DEFAULT NULL ,
 CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ;
 
-ALTER TABLE `chelaton`.`producto` 
-CHANGE COLUMN `nombre` `nombre` VARCHAR(45) NULL DEFAULT NULL ,
-CHANGE COLUMN `precio` `precio` VARCHAR(45) NULL DEFAULT NULL ,
-CHANGE COLUMN `estatus` `estatus` VARCHAR(45) NULL DEFAULT NULL ;
 
 ALTER TABLE `chelaton`.`orden_bitacora` 
 CHANGE COLUMN `descripcion` `descripcion` VARCHAR(45) NULL DEFAULT NULL ,

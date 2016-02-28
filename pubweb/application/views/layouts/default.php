@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>ModeloNow</title>
 
     <?foreach($utils['css'] AS $lib => $route): ?>
     <link rel="stylesheet" class="<?=$lib?>" type="text/css" href="<?=$route?>">
@@ -67,6 +67,10 @@
     <div class="col-md-12 color-blue text-center" style="font-size: 1.6em; margin-top: 30px;">
         #YoTomoCervezaPorque
     </div>
+    <div class="col-md-12 color-blue text-center" style="margin-top: 44px;">
+        <img src="<?=$utils['img']['android']?>" style="width: 150px; height: 60px">
+        <img src="<?=$utils['img']['ios']?>" style="width: 150px; height: 60px">
+    </div>
 
 </div> <!-- /container -->
 <br/><br/>
@@ -74,6 +78,46 @@
  <img src="<?=$utils['img']['feed']?>" class="img-responsive">
   <img src="<?=$utils['img']['footer']?>" class="img-responsive">
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Beneficios</h4>
+      </div>
+      <div class="modal-body">
+          <img src="<?=$utils['img']['puntos_canjeables']?>" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModalVip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Más Premiados</h4>
+      </div>
+      <div class="modal-body">
+          <img src="<?=$utils['img']['mas_premiados']?>" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

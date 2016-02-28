@@ -7,7 +7,7 @@ class MY_Controller extends CI_Controller
     public $error = array();
     public $success = array();
 
-<<<<<<< HEAD
+
 	public function add_success_message($index)
 	{
 		$this->success[] = lang($index);
@@ -34,10 +34,9 @@ class MY_Controller extends CI_Controller
 
 
 	}
-=======
+
     public $utils =[];
 
->>>>>>> 595705957352bbd0f84a43032d0c182c67f7e4b7
     public function __construct()
     {
        parent::__construct();

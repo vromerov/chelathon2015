@@ -39,8 +39,17 @@ class Home extends MY_Controller {
 				"cacahuates"	=>	base_url()."/util/images/cacahuates.png",
 				"chips"	=>	base_url()."/util/images/chips.png",
 				"pago"	=>	base_url()."/util/images/fase3.png",
-				"vip"	=>	base_url()."/util/images/membresia-vip.png",
+				"vip"	=>	base_url()."/util/images/vip.png",
+				"beneficios"	=>	base_url()."/util/images/beneficios.png",
+				"android"	=>	base_url()."/util/images/android-app-store.png",
+				"ios"	=>	base_url()."/util/images/apple-app-store.png",
+				"puntos_canjeables"	=>	base_url()."/util/images/puntos-canjeables.png",
+				"mas_premiados"	=>	base_url()."/util/images/mas-premiados.png",
+
+				
+			
 			]
+
 		];
 		
 		
